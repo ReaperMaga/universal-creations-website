@@ -26,9 +26,8 @@
   </head>
   <body class="bg-gradient-to-r from-gray-50 to-gray-200">
     <nav
-      class="w-full h-24 bg-accent-color shadow-lg flex justify-between px-20 items-center absolute"
-    >
-      <div class="flex w-full justify-start lg:justify-center">
+      class="w-full h-24 bg-accent-color shadow-lg flex justify-center lg:justify-between px-0 lg:px-20 items-center absolute">
+      <div class="w-full justify-start hidden xl:flex justify-center">
         <img
           src="images/logo.png"
           width="150px"
@@ -36,11 +35,9 @@
         />
       </div>
 
-      <div
-        class="flex items-center justify-center font-poppins-bold uppercase text-gray-50 gap-10 text-xl w-full m"
-      >
-        <a class="cursor-pointer transition hover:text-gray-200">Home</a>
+      <div class="flex items-center justify-center font-poppins-bold uppercase text-gray-50 gap-10 text-sm sm:text-xl w-full m">
         <a href="#about" class="cursor-pointer transition hover:text-gray-200">About</a>
+        <a href="#gallery" class="cursor-pointer transition hover:text-gray-200">Gallery</a>
         <a href="#reviews" class="cursor-pointer transition hover:text-gray-200">Reviews</a>
         <a href="#clients" class="cursor-pointer transition hover:text-gray-200">Clients</a>
       </div>
@@ -52,22 +49,22 @@
     >
       <div class="flex items-center justify-center h-full gap-32 flex-grow">
         <div class="flex flex-col gap-y-3">
-          <h1 class="font-poppins-bold text-4xl w-96">
+          <h1 class="font-poppins-bold text-2xl sm:text-4xl  w-80 sm:w-96 text-center lg:text-left">
             Welcome to Universal Creations
           </h1>
-          <p class="w-96 text-xl text-gray-700">
+          <p class="w-80 sm:w-96 text-md sm:text-xl text-gray-700 text-center lg:text-left">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua.
           </p>
           <a
             href="#about"
-            class="mt-10 bg-accent-color text-gray-100 py-3 rounded shadow-md w-48 text-center transition hover:bg-[#3cb88a]"
+            class="mt-10 bg-accent-color text-gray-100 py-3 rounded shadow-md w-40 sm:w-48 text-center mx-auto lg:mx-0 transition hover:bg-[#3cb88a]"
           >
             Learn more...
           </a>
         </div>
-        <div>
+        <div class="hidden lg:flex">
           <img src="images/intro.png" alt="intro" width="500px" />
         </div>
       </div>
@@ -94,17 +91,17 @@
       class="py-20 bg-gradient-to-l from-gray-200 to-gray-300 flex justify-center gap-96"
       style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
     >
-      <img
+      <img class="hidden lg:flex"
         src="https://crafatar.com/renders/body/66777a5a-c4fc-4bc2-bf26-625f3b6fcac6?overlay=true"
         width="150"
         data-aos="fade-right"
       />
       <div
-        class="flex flex-col items-center w-96 gap-3 text-center"
+        class="flex flex-col items-center w-80 sm:w-96 gap-3 text-center"
         data-aos="fade-left"
       >
-        <h1 class="font-poppins-bold text-4xl">About us</h1>
-        <p class="text-xl text-gray-600">
+        <h1 class="font-poppins-bold text-2xl sm:text-4xl">About us</h1>
+        <p class="text-md sm:text-xl text-gray-600">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing
@@ -114,12 +111,31 @@
       </div>
     </section>
 
-    <section id="reviews" class="mt-24 w-7/12 mx-auto" data-aos="fade-up">
+    <!-- Used for scrolling to -->
+    <section id="gallery"></section>
+    
+    <section class="mt-24 w-9/12 mx-auto" data-aos="fade-up">
+      <h1 class="font-poppins-bold text-4xl text-left">Gallery</h1>
+      <p class="text-xl text-gray-500">Minecraft art display with creative block builds.</p>
+      <hr class="mt-3" />
+      <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 mt-8 w-full justify-between gap-y-16 mx-auto">
+        <div class="bg-cover w-72 sm:w-96 h-44 sm:h-60 bg-center rounded shadow mx-auto transition hover:scale-95" style="background-image: url('https://media.discordapp.net/attachments/1195218644205056040/1195507567015772200/holysword.png?ex=65b43e2f&is=65a1c92f&hm=8651ed5cb01da99b9181fe27d8796e0d274771224387b9329c2059ccbdbfffc4&=&format=webp&quality=lossless&width=810&height=427');">
+        </div>
+        <div class="bg-cover w-72 sm:w-96 h-44 sm:h-60 bg-center rounded shadow mx-auto transition hover:scale-95" style="background-image: url('https://cdn.discordapp.com/attachments/1195218644205056040/1195507568743829644/bonsaiIsland.png?ex=65b43e2f&is=65a1c92f&hm=def94b83d76ae645215f064f6a07e19406bb6b4c48327cd1548de38d0bea3e07&');">
+        </div>
+        <div class="bg-cover w-72 sm:w-96 h-44 sm:h-60 bg-center rounded shadow mx-auto transition hover:scale-95" style="background-image: url('https://cdn.discordapp.com/attachments/1195218644205056040/1195507564876677180/Pantheon.png?ex=65b43e2e&is=65a1c92e&hm=ef66e991cb31ed09a4aeea3acb0e195f70b71b2b195780cedb6fe6a18a49cf94&');">
+        </div>
+      </div>
+     
+    </section>
+
+    <section id="reviews" class="mt-48 w-full lg:w-9/12 2xl:w-7/12 mx-auto" data-aos="fade-up">
       <h1 class="font-poppins-bold text-4xl text-center">Reviews</h1>
-      <div class="splide py-20" aria-label="Reviews">
+      <p class="text-xl text-gray-500 text-center">What our customers are saying...</p>
+      <div class="splide py-10" aria-label="Reviews">
         <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide px-20 flex justify-center items-center w-7/12 h-[550px]">
+          <ul class="splide__list h-[200px] md:h-[550px]">
+            <li class="splide__slide px-20 flex justify-center items-center w-full h-full">
               <div class="rounded  h-full w-full" style="background-image: url('https://cdn.discordapp.com/attachments/1195218644205056040/1195507076038918144/islandThingy.png?ex=65b43dba&is=65a1c8ba&hm=ad5a10e19ef1b6fc2f15bdcb83e0a651318f787856ab75e269b4857222726b0d&'); background-position: center center; background-size: cover; background-repeat: no-repeat;">
                 <div class="opacity-0 duration-500 transition hover:opacity-100 bg-gradient-to-t from-zinc-700 to-transparent w-full h-full flex flex-col justify-end px-7 py-10 text-white">
                   <h1><span class="text-yellow-300">🟊🟊🟊🟊🟊</span></h1>
@@ -129,7 +145,7 @@
               </div>
             </li>
 
-            <li class="splide__slide px-20 flex justify-center items-center w-7/12 h-[550px]">
+            <li class="splide__slide px-20 flex justify-center items-center w-full h-full">
               <div class="rounded  h-full w-full" style="background-image: url('https://cdn.discordapp.com/attachments/1195218644205056040/1195507078110904450/DTC.png?ex=65b43dba&is=65a1c8ba&hm=0e5000127da9e143f5ced380bd955c5cdb64a41d39ff62b0d32bc4c4aff0d2e7&'); background-position: center center; background-size: cover; background-repeat: no-repeat;">
                 <div class="opacity-0 duration-500 transition hover:opacity-100 bg-gradient-to-t from-zinc-700 to-transparent w-full h-full flex flex-col justify-end px-7 py-10 text-white">
                   <h1><span class="text-yellow-300">🟊🟊🟊🟊🟊</span></h1>
@@ -146,10 +162,12 @@
     <section id="clients" class="mt-24 mb-24 bg-gradient-to-l from-gray-500 to-gray-400 py-20" data-aos="fade-up">
       <h1 class="font-poppins-bold text-4xl text-center text-gray-50">Our clients</h1>
       <div class="flex items-center justify-center mt-16">
-        <div class="flex items-center gap-x-24">
+        <div class="grid grid-cols-1 sm:grid-cols-2 items-center gap-x-24">
 
           <div class="flex flex-col items-center">
-            <img width="200px" src="https://cdn.discordapp.com/attachments/1195218644205056040/1195514919647457391/Nethergames-removebg-preview.png?ex=65b44508&is=65a1d008&hm=4332692dfef2d2a84a5faa1ff557767bb5b817856380de9f20a41c8321aab7fd&" />
+            <a href="https://nethergames.org" class="w-48 h-48" target="_blank">
+              <img class="transition hover:scale-105" class="w-auto h-auto" src="https://cdn.discordapp.com/attachments/1195218644205056040/1195514919647457391/Nethergames-removebg-preview.png?ex=65b44508&is=65a1d008&hm=4332692dfef2d2a84a5faa1ff557767bb5b817856380de9f20a41c8321aab7fd&" />
+            </a>
             <div class="flex flex-col items-center text-gray-50">
               <span class="font-poppins-semibold uppercase text-xl ">Nethergames</span>
               <span class="bg-red-500 px-2 rounded-md text-sm mt-1">MiniGames</span>
@@ -158,11 +176,13 @@
           </div>
 
           <div class="flex flex-col items-center">
-            <img width="200px" class="mb-3" src="https://cdn.discordapp.com/attachments/931658752325746698/1195530520394735727/icon-png-glow_2.png?ex=65b4538f&is=65a1de8f&hm=badd5d3bf0e50d551f1f8f681361acaedc0198286117c9566d7c1f9b059f96d7&" />
-            <div class="flex flex-col items-center text-gray-50 mb-2">
+            <a href="https://prismar.in" class="w-48 h-48" target="_blank">
+              <img class="transition hover:scale-105" class="w-full h-full" src="https://cdn.discordapp.com/attachments/931658752325746698/1195530520394735727/icon-png-glow_2.png?ex=65b4538f&is=65a1de8f&hm=badd5d3bf0e50d551f1f8f681361acaedc0198286117c9566d7c1f9b059f96d7&" />
+            </a>
+            <div class="flex flex-col items-center text-gray-50">
               <span class="font-poppins-semibold uppercase text-xl ">Prismarin</span>
               <span class="bg-red-500 px-2 rounded-md text-sm mt-1">MiniGames</span>
-              <span class="text-gray-300">Realistic guns and armor</span>
+              <span class="text-gray-300">Realistic gun server</span>
             </div>
           </div>
           
@@ -182,7 +202,14 @@
     </script>
 
     <script>
-              new Splide( '.splide' ).mount();
+              new Splide( '.splide',{
+                classes: {
+		arrows: 'splide__arrows your-class-arrows',
+		arrow : 'splide__arrow hidden lg:flex',
+		prev  : 'splide__arrow--prev your-class-prev',
+		next  : 'splide__arrow--next your-class-next',
+  },
+              } ).mount();
 
     </script>
     
