@@ -19,15 +19,13 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script>
-
-    </script>
+    
     
   </head>
   <body class="bg-gradient-to-r from-gray-50 to-gray-200">
     <nav
       class="w-full h-24 bg-accent-color shadow-lg flex justify-center lg:justify-between px-0 lg:px-20 items-center absolute">
-      <div class="w-full justify-start hidden xl:flex justify-center">
+      <div class="w-full hidden xl:flex justify-center">
         <img
           src="images/logo.png"
           width="150px"
@@ -118,13 +116,9 @@
       <h1 class="font-poppins-bold text-4xl text-left">Gallery</h1>
       <p class="text-xl text-gray-500">Minecraft art display with creative block builds.</p>
       <hr class="mt-3" />
-      <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 mt-8 w-full justify-between gap-y-16 mx-auto">
-        <div class="bg-cover w-72 sm:w-96 h-44 sm:h-60 bg-center rounded shadow mx-auto transition hover:scale-95" style="background-image: url('https://media.discordapp.net/attachments/1195218644205056040/1195507567015772200/holysword.png?ex=65b43e2f&is=65a1c92f&hm=8651ed5cb01da99b9181fe27d8796e0d274771224387b9329c2059ccbdbfffc4&=&format=webp&quality=lossless&width=810&height=427');">
-        </div>
-        <div class="bg-cover w-72 sm:w-96 h-44 sm:h-60 bg-center rounded shadow mx-auto transition hover:scale-95" style="background-image: url('https://cdn.discordapp.com/attachments/1195218644205056040/1195507568743829644/bonsaiIsland.png?ex=65b43e2f&is=65a1c92f&hm=def94b83d76ae645215f064f6a07e19406bb6b4c48327cd1548de38d0bea3e07&');">
-        </div>
-        <div class="bg-cover w-72 sm:w-96 h-44 sm:h-60 bg-center rounded shadow mx-auto transition hover:scale-95" style="background-image: url('https://cdn.discordapp.com/attachments/1195218644205056040/1195507564876677180/Pantheon.png?ex=65b43e2e&is=65a1c92e&hm=ef66e991cb31ed09a4aeea3acb0e195f70b71b2b195780cedb6fe6a18a49cf94&');">
-        </div>
+      <div id="gallery_items" class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 mt-8 w-full justify-between gap-y-16 mx-auto">
+  
+       
       </div>
      
     </section>
@@ -134,9 +128,9 @@
       <p class="text-xl text-gray-500 text-center">What our customers are saying...</p>
       <div class="splide py-10" aria-label="Reviews">
         <div class="splide__track">
-          <ul class="splide__list h-[200px] md:h-[550px]">
+          <ul class="splide__list h-[210px] md:h-[350px] xl:h-[500px]">
             <li class="splide__slide px-20 flex justify-center items-center w-full h-full">
-              <div class="rounded  h-full w-full" style="background-image: url('https://cdn.discordapp.com/attachments/1195218644205056040/1195507076038918144/islandThingy.png?ex=65b43dba&is=65a1c8ba&hm=ad5a10e19ef1b6fc2f15bdcb83e0a651318f787856ab75e269b4857222726b0d&'); background-position: center center; background-size: cover; background-repeat: no-repeat;">
+              <div class="rounded w-full h-full " style="background-image: url('https://cdn.discordapp.com/attachments/1195218644205056040/1195507076038918144/islandThingy.png?ex=65b43dba&is=65a1c8ba&hm=ad5a10e19ef1b6fc2f15bdcb83e0a651318f787856ab75e269b4857222726b0d&'); background-position: center; background-size: cover; background-repeat: no-repeat;">
                 <div class="opacity-0 duration-500 transition hover:opacity-100 bg-gradient-to-t from-zinc-700 to-transparent w-full h-full flex flex-col justify-end px-7 py-10 text-white">
                   <h1><span class="text-yellow-300">🟊🟊🟊🟊🟊</span></h1>
                   <h1 class="font-poppins-bold uppercase">Big ocean thingy</h1>
@@ -193,10 +187,16 @@
       </div>
     </section>
 
+    <div id="gallery-fullscreen">
+      <div onclick="disableFullScreen()" id="gallery-fullscreen-content" class="flex items-center justify-center">
+        <img id="gallery-fullscreen-image" src="shadow-xl" class="w-10/12" alt="Fullscreen Image" />
+      </div>
+    </div>
 
 
+   
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    
+    <script src="script.js"></script>
     <script>
       AOS.init();
     </script>

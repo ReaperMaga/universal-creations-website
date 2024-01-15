@@ -33,3 +33,34 @@ body {
 .font-poppins-semibold {
     font-weight: 500;
 }
+
+#gallery-fullscreen {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: auto auto;
+    display: none;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);  
+}
+
+#gallery-fullscreen-content {
+    background-color: rgba(1, 1, 1, 0.8);
+    height: 100%;
+    width: 100%;
+}
+
+.fade-in {
+    animation: slide-out 350ms ease;
+}
+
+@keyframes slide-out{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        transform: 100%;
+    }
+}
