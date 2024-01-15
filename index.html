@@ -189,7 +189,7 @@
 
     <div id="gallery-fullscreen">
       <div onclick="disableFullScreen()" id="gallery-fullscreen-content" class="flex items-center justify-center">
-        <img id="gallery-fullscreen-image" src="shadow-xl" class="w-10/12" alt="Fullscreen Image" />
+        <img id="gallery-fullscreen-image" src="" class="w-10/12 shadow-xl" alt="Fullscreen Image" />
       </div>
     </div>
 
@@ -203,6 +203,12 @@
 
     <script>
               new Splide( '.splide',{
+                type: "loop",
+                autoplay: true,
+                interval: 4500,
+                lazyLoad: true,
+                speed: 1500,
+
                 classes: {
 		arrows: 'splide__arrows your-class-arrows',
 		arrow : 'splide__arrow hidden lg:flex',
