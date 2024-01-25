@@ -42,7 +42,9 @@ async function loadGallery() {
 
     let galleryItems = ""
     urls.forEach(element => {
-        galleryItems += galleryHtmlText.replaceAll("{url}", element).trim()
+        if(element.startsWith("https://") || element.startsWith("http://")) {
+            galleryItems += galleryHtmlText.replaceAll("{url}", element).trim()
+        }
     });
 
     galleryItemsParent.innerHTML = galleryItems;
