@@ -187,6 +187,37 @@
       </div>
     </section>
 
+    <section id="contact_us" class="mt-24 mb-24">
+      
+      <div class="w-full sm:w-9/12 xl:w-7/12 h-[580px] mx-auto rounded-sm shadow-lg flex">
+        <div class="bg-accent-color w-full h-full rounded-tl-sm rounded-bl-sm">
+          <h1 class="mt-6 text-center text-3xl font-poppins-bold uppercase text-gray-100">Contact us</h1>
+
+          <form id="contact_form" class="w-full flex items-center flex-col py-5 gap-y-5" onsubmit="submitForm(event)">
+            <div class="flex flex-col w-9/12 sm:w-4/6">
+              <label class="font-poppins-semibold text-gray-100">Name</label>
+              <input id="name" name="name" class="px-3 py-2 rounded-sm shadow w-full text-zinc-900 outline-none" placeholder="...." required/>
+            </div>
+            <div class="flex flex-col w-9/12 sm:w-4/6">
+              <label class="font-poppins-semibold text-gray-100">E-Mail</label>
+              <input id="email" name="email" type="email" class="px-3 py-2 rounded-sm shadow w-full text-zinc-900 outline-none" placeholder="...." required/>
+            </div>
+            <div class="flex flex-col w-9/12 sm:w-4/6">
+              <label class="font-poppins-semibold text-gray-100">Message</label>
+              <textarea id="message" name="message" class="px-3 py-2 rounded-sm shadow w-full text-zinc-900 outline-none h-44" placeholder="...." required></textarea>
+            </div>
+            <p id="form_error" class="text-gray-100"></p>
+            <input type="submit" class="bg-[#0C7C59] rounded shadow text-gray-100 px-7 py-3 transition hover:bg-[#0C7C59]/80 cursor-pointer"></input>
+          </form>
+
+        </div>
+        <div class="w-4/6 h-full bg-zinc-400 rounded-tr-sm rounded-br-sm hidden lg:flex items-center justify-center shadow-md ">
+          <img src="images/logo.png" width="500px"/>
+        </div>
+      </div>
+
+    </section>
+
     <div id="gallery-fullscreen">
       <div onclick="disableFullScreen()" id="gallery-fullscreen-content" class="flex items-center justify-center">
         <img id="gallery-fullscreen-image" src="" class="w-10/12 shadow-xl" alt="Fullscreen Image" />
@@ -218,6 +249,39 @@
               } ).mount();
 
     </script>
+
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init("lETXDeLHLUblcJORu");
+})();
+
+let submitting = false
+
+function submitForm(event) {
+  event.preventDefault();
+  if(submitting) {
+    return
+  }
+  submitting = true
+
+  const formError = document.getElementById("form_error")
+  emailjs.sendForm('service_0yoss24', 'template_j00z1tz', '#contact_form')
+    .then(function(response) {
+      formError.innerText = "You have successfully submitted the form";
+      document.getElementById("contact_form").reset();
+      submitting = false;
+    }, function(error) {
+      formError.innerText = "There was an error while trying to submit the form";
+      document.getElementById("contact_form").reset();
+      submitting = false;
+    });
+    return false
+}
+
+</script>
     
   </body>
 </html>
