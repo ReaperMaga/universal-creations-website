@@ -128,26 +128,8 @@
       <p class="text-xl text-gray-500 text-center">What our customers are saying...</p>
       <div class="splide py-10" aria-label="Reviews">
         <div class="splide__track">
-          <ul class="splide__list h-[210px] md:h-[350px] xl:h-[500px]">
-            <li class="splide__slide px-20 flex justify-center items-center w-full h-full">
-              <div class="rounded w-full h-full " style="background-image: url('https://cdn.discordapp.com/attachments/1195218644205056040/1195507076038918144/islandThingy.png?ex=65b43dba&is=65a1c8ba&hm=ad5a10e19ef1b6fc2f15bdcb83e0a651318f787856ab75e269b4857222726b0d&'); background-position: center; background-size: cover; background-repeat: no-repeat;">
-                <div class="opacity-0 duration-500 transition hover:opacity-100 bg-gradient-to-t from-zinc-700 to-transparent w-full h-full flex flex-col justify-end px-7 py-10 text-white">
-                  <h1><span class="text-yellow-300">🟊🟊🟊🟊🟊</span></h1>
-                  <h1 class="font-poppins-bold uppercase">Big ocean thingy</h1>
-                  <p class="text-gray-300"><span class="font-poppins-semibold text-gray-200">Bucky:</span> The build looks absolutely incredible in just the short span of an hour. Crumb was very friendly to work with and is fun to be around.</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="splide__slide px-20 flex justify-center items-center w-full h-full">
-              <div class="rounded  h-full w-full" style="background-image: url('https://cdn.discordapp.com/attachments/1195218644205056040/1195507078110904450/DTC.png?ex=65b43dba&is=65a1c8ba&hm=0e5000127da9e143f5ced380bd955c5cdb64a41d39ff62b0d32bc4c4aff0d2e7&'); background-position: center center; background-size: cover; background-repeat: no-repeat;">
-                <div class="opacity-0 duration-500 transition hover:opacity-100 bg-gradient-to-t from-zinc-700 to-transparent w-full h-full flex flex-col justify-end px-7 py-10 text-white">
-                  <h1><span class="text-yellow-300">🟊🟊🟊🟊🟊</span></h1>
-                  <h1 class="font-poppins-bold uppercase">Spawn</h1>
-                  <p class="text-gray-300"><span class="font-poppins-semibold text-gray-200">Bucky:</span> Crumb was really fun to work with, helping me expand my idea further for my video. The build looks phenomenal and perfectly fits what I'm looking for.</p>
-                </div>
-              </div>
-            </li>
+          <ul class="splide__list h-[210px] md:h-[350px] xl:h-[500px]" id="review_items">
+            
           </ul>
         </div>
       </div>
@@ -187,7 +169,7 @@
       </div>
     </section>
 
-    <section id="contact_us" class="mt-24 mb-24">
+    <section id="contact_us" class="mt-24 mb-24" data-aos="fade-up">
       
       <div class="w-full sm:w-9/12 xl:w-7/12 h-[580px] mx-auto rounded-sm shadow-lg flex">
         <div class="bg-accent-color w-full h-full rounded-tl-sm rounded-bl-sm">
@@ -232,23 +214,6 @@
       AOS.init();
     </script>
 
-    <script>
-              new Splide( '.splide',{
-                type: "loop",
-                autoplay: true,
-                interval: 4500,
-                lazyLoad: true,
-                speed: 1500,
-
-                classes: {
-		arrows: 'splide__arrows your-class-arrows',
-		arrow : 'splide__arrow hidden lg:flex',
-		prev  : 'splide__arrow--prev your-class-prev',
-		next  : 'splide__arrow--next your-class-next',
-  },
-              } ).mount();
-
-    </script>
 
 <script type="text/javascript"
 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
