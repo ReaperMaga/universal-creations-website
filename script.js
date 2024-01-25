@@ -14,8 +14,6 @@ async function loadGallery() {
         galleryItems += galleryHtmlText.replaceAll("{url}", element).trim()
     });
 
-    console.log(galleryItems)
-    
     galleryItemsParent.innerHTML = galleryItems;
 }
 
