@@ -1,7 +1,7 @@
-https://i.ibb.co/bmKCHmy/Pantheon.png
-https://i.ibb.co/1GxJpxF/holysword.png
-https://i.ibb.co/0FmD1fy/bonsai-Island.png
-https://i.ibb.co/D1wRpt4/Runic-Building.png
-https://i.ibb.co/Mhyn0N8/steam2.png
-https://i.ibb.co/PNJ3Z9q/Sword.png
-https://i.ibb.co/2shCBsN/Gingerbread.png
+images/gallery/Pantheon.jpg
+images/gallery/holysword.jpg
+images/gallery/bonsai-Island.jpg
+images/gallery/Runic-Building.jpg
+images/gallery/steam2.jpg
+images/gallery/Sword.jpg
+images/gallery/Gingerbread.jpg
